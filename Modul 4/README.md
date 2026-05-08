@@ -10,8 +10,9 @@
 | Abdullah Faqiih Fadhlurrahman | 5024241092 |
 
 
-####  Modul 1: Konfigurasi Dasar Jaringan IPv4
-- Crimping
-- Konfigurasi Routing Statis dan Routing Dinamis IPv4
-- Topologi Jaringan
+####  Modul 4: Firewall & NAT
+- Filter Rules (Accept, Drop, Reject)
+- NAT (Masquerade, Port Forwarding)
+- Connection Tracking
+- Proteksi router dari akses luar
 
