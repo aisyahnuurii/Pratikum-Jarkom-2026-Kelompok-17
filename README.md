@@ -9,7 +9,7 @@
 | Athallah Ramadhan             | 5024241074 |
 | Abdullah Faqiih Fadhlurrahman | 5024241092 |
 
-#### Modul 5: Konfigurasi OSPF Multivendor
-- Huawei
-- Cisco
-- MikroTik
+####  Modul 1: Konfigurasi Dasar Jaringan IPv4
+- Crimping
+- Konfigurasi Routing Statis dan Routing Dinamis IPv4
+- Topologi Jaringan
