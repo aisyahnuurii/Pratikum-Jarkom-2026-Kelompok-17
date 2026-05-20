@@ -10,7 +10,6 @@
 | Abdullah Faqiih Fadhlurrahman | 5024241092 |
 
 
-####  Modul 3: Wireless LAN dan Ubiquitous
+####  Modul 3: Wireless
 - Konfigurasi Access Point dan Station
 - Point to Point, Point to Multipoint, Wireless Bridge
-- Konfigtuasi jaringan Ubiquitous
