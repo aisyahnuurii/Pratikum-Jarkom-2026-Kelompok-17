@@ -166,7 +166,10 @@ copy running-config startup-config
 
 ### Screenshot
 
-![Cisco](images/cisco.png)
+![Cisco](images/7.jpeg)
+![Cisco](images/8.jpeg)
+![Cisco](images/9.jpeg)
+![Cisco](images/10.jpeg)
 
 ---
 
@@ -236,7 +239,7 @@ Tumod_4_DMZ_Firewall_KelompokXX
 
 ### Screenshot
 
-![DMZ](images/server_dmz.png)
+![DMZ](images/11.jpeg)
 
 ---
 
