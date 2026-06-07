@@ -6,7 +6,7 @@ Topologi yang digunakan pada praktikum ini terdiri dari MikroTik ISP, FortiGate,
 
 ## Screenshot Topologi
 
-![Topologi](images/topologi.png)
+![Topologi](images/topologi.jpeg)
 
 ---
 
@@ -62,7 +62,8 @@ Topologi yang digunakan pada praktikum ini terdiri dari MikroTik ISP, FortiGate,
 
 ### Screenshot
 
-![MikroTik](images/mikrotik.png)
+![MikroTik](images/1.jpeg)
+![MikroTik](images/2.jpeg)
 
 ---
 
@@ -127,7 +128,10 @@ end
 
 ### Screenshot
 
-![FortiGate](images/fortigate.png)
+![FortiGate](images/3.jpeg)
+![FortiGate](images/4.jpeg)
+![FortiGate](images/5.jpeg)
+![FortiGate](images/6.jpeg)
 
 ---
 
