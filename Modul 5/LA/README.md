@@ -6,7 +6,7 @@ Topologi yang digunakan pada praktikum ini terdiri dari NET, MikroTik ISP, Addre
 
 ## Screenshot Topologi
 
-![Topologi](images/topologi.jpeg)
+![Topologi](images/1.png)
 
 
 ## Gambaran Topologi
@@ -228,15 +228,15 @@ Cisco Switch Jakarta.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot topologi Jakarta.
-![Topologi](images/topologi.jpeg)
+![Topologi](images/1.png)
 
 3. Screenshot `show vlan brief`.
 
-![](images/1.jpeg)
+![](images/2.png)
 
 3. Screenshot `show interfaces trunk`.
 
-![](images/2.jpeg)
+![](images/3.png)
 
 ---
 
@@ -250,16 +250,16 @@ Cisco Router Jakarta.
 
 1. Screenshot `show ip interface brief`.
 
-![](images/2.jpeg)
+![](images/4.png)
 
 2. Screenshot `show vrrp brief`.
 
-![](images/2.jpeg)
+![](images/5.png)
 
 3. Screenshot konfigurasi subinterface.
-![](images/2.jpeg)
+![](images/4.png)
 4. Screenshot ping dari Cisco Router ke FortiGate Jakarta.
-![](images/2.jpeg)
+![](images/6.png)
 
 ---
 
@@ -272,16 +272,16 @@ MikroTik Router Jakarta.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot `/ip address print`.
-![](images/2.jpeg)
-
+ ![](images/7.png) 
 2. Screenshot `/interface vrrp print`.
-![](images/2.jpeg)
+![](images/7.png)
 3. Screenshot `/ip dhcp-relay print`.
-![](images/2.jpeg)
+![](images/7.png)
 4. Screenshot `/ip route print`.
-![](images/2.jpeg)
+![](images/7.png)
+
 5. Screenshot ping dari MikroTik ke FortiGate Jakarta.
-![](images/2.jpeg)
+![](images/8.png)
 ---
 
 # Tugas Modul 4 — Konfigurasi Ubuntu Server Jakarta
@@ -293,14 +293,13 @@ Ubuntu Server Jakarta.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot `ip a`.
-![](images/2.jpeg)
+ ![](images/9.png)  
 2. Screenshot `ip route`.
-![](images/2.jpeg)
-3. Screenshot isi file `/etc/dhcp/dhcpd.conf`.
-
-![](images/2.jpeg)
-4. Sreenshot `ping 8.8.8.8`
-![](images/2.jpeg)
+![](images/9.png)
+4. Screenshot isi file `/etc/dhcp/dhcpd.conf`.
+![](images/10.png)
+5. Sreenshot `ping 8.8.8.8`
+![](images/16.png)
 ---
 
 # Tugas Modul 5 — Konfigurasi FortiGate Jakarta
@@ -308,21 +307,43 @@ Ubuntu Server Jakarta.
 ## Perangkat yang Dikonfigurasi
 
 FortiGate Jakarta.
+## Bukti yang Dikumpulkan
 
+1. Screenshot `get system interface physical`.
+![](images/11.png)
+2. Screenshot `get router info routing-table all`.
+   ![](images/12.png)
+3. Screenshot firewall policy.
+   ![](images/20.png)
+4. Screenshot ping ke 8.8.8.8.
+![](images/20.png)
+5. Screenshot ping ke IP tunnel Surabaya.
+   ![](images/20.png)
+7. Screenshot `get router info ospf neighbor`.
+ ![](images/13.png)  
+8. Screenshot `get router info routing-table ospf`.
+![](images/13.png)
+---
+# Tugas Modul 6 — Konfigurasi MikroTik ISP
+
+## Perangkat yang Dikonfigurasi
+
+MikroTik ISP.
 
 ## Bukti yang Dikumpulkan
 
-1. Screenshot `/ip address print` **hasil di ether 1 bisa saja berbeda karena emang dinamic**.
-![](images/2.jpeg)
+1. Screenshot `/ip address print`.
+![](images/14.png)
 2. Screenshot `/ip route print`.
-![](images/2.jpeg)
+![](images/14.png)
 3. Screenshot `/ip firewall nat print`.
-![](images/2.jpeg)
+![](images/14.png)
 4. Screenshot ping ke 8.8.8.8.
-  ![](images/2.jpeg)
+![](images/14.png)
 5. Screenshot ping antar-WAN FortiGate.
-![](images/2.jpeg)
+![](images/15.png)
 ---
+
 
 # Tugas Modul 7 — Konfigurasi Switch dan MikroTik Surabaya
 
@@ -334,22 +355,22 @@ Cisco Switch Surabaya dan MikroTik Router Surabaya.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot `show vlan brief`.
-![](images/2.jpeg)
+![](images/17.png)
 2. Screenshot `show interfaces trunk`.
-![](images/2.jpeg)
+![](images/17.png)
 3. Screenshot `/ip address print`.
-![](images/2.jpeg)
+![](images/17.png)
 4. Screenshot `/ip dhcp-server print`.
-![](images/2.jpeg)
+![](images/17.png)
 5. Screenshot `/ip pool print`.
-![](images/2.jpeg)
+![](images/17.png)
 6. Screenshot `/ip route print`.
-![](images/2.jpeg)
+![](images/17.png)
 7. Screenshot client VLAN 30 mendapat IP DHCP.
-![](images/2.jpeg)
+![](images/18.png)
 
 8. Screenshot ping client Surabaya ke 8.8.8.8.
-![](images/2.jpeg)
+![](images/18.png)
 
 ---
 
@@ -362,19 +383,19 @@ FortiGate Surabaya..
 ## Bukti yang Dikumpulkan
 
 1. Screenshot `get system interface physical`.
- ![](images/2.jpeg)  
+![](images/19.png)
 2. Screenshot `get router info routing-table all`.
-![](images/2.jpeg)
+![](images/19.png)
 3. Screenshot firewall policy.
-   ![](images/2.jpeg)
+![](images/20.png)
 4. Screenshot ping ke 8.8.8.8.
-   ![](images/2.jpeg)
+![](images/20.png)
 5. Screenshot ping ke IP tunnel Jakarta.
-![](images/2.jpeg)
+![](images/20.png)
 6. Screenshot `get router info ospf neighbor`.
-![](images/2.jpeg)
+![](images/21.png)
 7. Screenshot `get router info routing-table ospf`.
-![](images/2.jpeg)
+![](images/22.png)
 
 ---
 
@@ -388,17 +409,17 @@ FortiGate Jakarta dan FortiGate Surabaya.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot ping WAN antar-FortiGate.
-   ![](images/2.jpeg)
+![](images/23.png)
 2. Screenshot ping tunnel antar-FortiGate.
-![](images/2.jpeg)
-3. Screenshot `get router info ospf neighbor`.
-   ![](images/2.jpeg)
-4. Screenshot `get router info routing-table ospf`.
-   ![](images/2.jpeg)
-5. Screenshot ping client Jakarta ke client Surabaya.
-   ![](images/2.jpeg)
-6. Screenshot ping client Surabaya ke client Jakarta.
-    ![](images/2.jpeg)
+![](images/24.png)
+4. Screenshot `get router info ospf neighbor`.
+![](images/27.png)
+5. Screenshot `get router info routing-table ospf`.
+![](images/27.png)
+6. Screenshot ping client Jakarta ke client Surabaya.
+![](images/25.png)
+7. Screenshot ping client Surabaya ke client Jakarta.
+![](images/26.png)
 
 ---
 
@@ -411,17 +432,17 @@ Seluruh perangkat pada topologi.
 ## Hal yang Harus Diuji
 
 1. Client VLAN 10 Jakarta mendapat IP DHCP dari Ubuntu Server.
-   ![](images/2.jpeg)
+![](images/28.png)
 2. Client VLAN 20 Jakarta mendapat IP DHCP dari Ubuntu Server.
-   ![](images/2.jpeg)
+![](images/29.png)
 3. Client VLAN 30 Surabaya mendapat IP DHCP dari MikroTik Surabaya.
-   ![](images/2.jpeg)
+![](images/30.png)
 4. Client VLAN 40 Surabaya menggunakan IP static.
-   ![](images/2.jpeg)
+![](images/31.png)
 5. Client Jakarta dapat ping 8.8.8.8.
-    ![](images/2.jpeg)
+![](images/32.png)
 6. Client Surabaya dapat ping 8.8.8.8.
-    ![](images/2.jpeg)
+![](images/33.png)
 7. Client Jakarta dapat ping client Surabaya.
     ![](images/2.jpeg)
 8. Client Surabaya dapat ping client Jakarta.
@@ -435,31 +456,35 @@ Seluruh perangkat pada topologi.
 # 4. Hasil Pengujian
 
 1. Screenshot IP DHCP client Jakarta (Vlan 10).
-![](images/2.jpeg)
+![](images/30.png)
 2. Screenshot IP DHCP client Surabaya (Vlan 20).
-![](images/2.jpeg)
+![](images/31.png)
 
 3. Screenshot ping internet dari Jakarta.
-![](images/2.jpeg)
+![](images/32.png)
 
 
 4. Screenshot ping internet dari Surabaya.
-![](images/2.jpeg)
-5. Screenshot ping antar-site
-  ![](images/2.jpeg)
+![](images/33.png)
+
+6. Screenshot ping antar-site
+![](images/35.png)
    
-6. Screenshot akses web server Jakarta dari Surabaya.
-![](images/2.jpeg)
+7. Screenshot akses web server Jakarta dari Surabaya.
+![](images/36.png)
 
-7. Screenshot routing table OSPF.
-   ![](images/2.jpeg)
-8. Analisis singkat jalur traffic Jakarta ke Surabaya.
+8. Screenshot routing table OSPF.
+![](images/37.png)
 
+10. Analisis singkat jalur traffic Jakarta ke Surabaya.
+Ketika client di jaringan Jakarta (misalnya VLAN 10/20/60) mengirim paket menuju client di Surabaya (VLAN 30/40), paket pertama-tama diteruskan ke gateway VRRP aktif (Cisco Router atau MikroTik Router Jakarta, tergantung VLAN). Gateway tersebut meneruskan paket ke FortiGate Jakarta melalui link transit (port1/port2). Di FortiGate Jakarta, paket dicocokkan dengan routing table OSPF yang berisi network 192.168.30.0/24 dan 192.168.40.0/24 yang diiklankan oleh FortiGate Surabaya sebagai rute OSPF external type 2 (E2) melalui GRE Tunnel (172.16.0.2). Paket kemudian dienkapsulasi dan dikirim melalui GRE Tunnel ke FortiGate Surabaya.
+Setibanya di FortiGate Surabaya, paket di-dekapsulasi dan diteruskan ke MikroTik Router Surabaya melalui port2 (10.10.200.0/30), sesuai static route yang dikonfigurasi untuk network 192.168.30.0/24 dan 192.168.40.0/24. MikroTik Surabaya kemudian meneruskan paket ke VLAN tujuan (VLAN 30 atau VLAN 40) melalui interface gateway-nya hingga sampai ke client tujuan.
+Sebaliknya, paket balasan (reply) dari client Surabaya akan melewati jalur yang sama secara terbalik: MikroTik Surabaya → FortiGate Surabaya → GRE Tunnel → FortiGate Jakarta → Cisco/MikroTik Jakarta (gateway VRRP) → client Jakarta. Seluruh proses routing antar-site ini berjalan secara dinamis berkat OSPF yang dijalankan di atas GRE Tunnel, dengan redistribute static route yang memastikan network internal masing-masing site saling dikenali sebagai rute OSPF E2.
 ---
 
 # 5. Analisis
 
-Pada modul 5, praktikan mengkonfigurasi FortiGate Jakarta sebagai edge firewall, NAT gateway, dan penghubung GRE tunnel ke Surabaya. Berdasarkan hasil konfigurasi yang telah dilakukan, FortiGate Jakarta memiliki tiga interface fisik yang aktif. Port1 dengan alamat 10.10.100.1/30 terhubung ke Cisco Router Jakarta, port2 dengan alamat 10.10.101.1/30 terhubung ke MikroTik Router Jakarta, dan port3 dengan alamat 10.0.12.2/30 terhubung ke MikroTik ISP sebagai link WAN.
+Pada tugas modul 5, praktikan mengkonfigurasi FortiGate Jakarta sebagai edge firewall, NAT gateway, dan penghubung GRE tunnel ke Surabaya. Berdasarkan hasil konfigurasi yang telah dilakukan, FortiGate Jakarta memiliki tiga interface fisik yang aktif. Port1 dengan alamat 10.10.100.1/30 terhubung ke Cisco Router Jakarta, port2 dengan alamat 10.10.101.1/30 terhubung ke MikroTik Router Jakarta, dan port3 dengan alamat 10.0.12.2/30 terhubung ke MikroTik ISP sebagai link WAN.
 
 Penggunaan subnet /30 pada ketiga link menunjukkan efisiensi alamat IP untuk koneksi point-to-point. Dua interface menuju Cisco dan MikroTik Jakarta mendukung desain redundansi gateway karena kedua router tersebut menjalankan VRRP. Sementara port3 sebagai link WAN menempatkan FortiGate sebagai pintu keluar masuk traffic menuju internet.
 
