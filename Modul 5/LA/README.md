@@ -228,14 +228,15 @@ Cisco Switch Jakarta.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot topologi Jakarta.
+![Topologi](images/topologi.jpeg)
 
-2. Screenshot `show vlan brief`.
+3. Screenshot `show vlan brief`.
 
-![](images/tumod/tumod1/1.png)
+![](images/1.jpeg)
 
 3. Screenshot `show interfaces trunk`.
 
-![](images/tumod/tumod1/2.png)
+![](images/2.jpeg)
 
 ---
 
@@ -249,24 +250,16 @@ Cisco Router Jakarta.
 
 1. Screenshot `show ip interface brief`.
 
-![alt text](images/tumod/tumod2/1.png)
+![](images/2.jpeg)
 
 2. Screenshot `show vrrp brief`.
 
-![alt text](images/tumod/tumod2/2.png)
+![](images/2.jpeg)
 
 3. Screenshot konfigurasi subinterface.
-
+![](images/2.jpeg)
 4. Screenshot ping dari Cisco Router ke FortiGate Jakarta.
-```
-CISCO-JAKARTA#ping 10.10.100.1
-Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 10.10.100.1, timeout is 2 seconds:
-!!!!!
-Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
-CISCO-JAKARTA#
-
-```
+![](images/2.jpeg)
 
 ---
 
@@ -279,75 +272,16 @@ MikroTik Router Jakarta.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot `/ip address print`.
-```
-[admin@Mikrotik-Jakarta] > ip address print
-Flags: X - disabled, I - invalid, D - dynamic 
- #   ADDRESS            NETWORK         INTERFACE                                     
- 0   192.168.10.3/24    192.168.10.0    vlan10-finance                                
- 1   192.168.20.3/24    192.168.20.0    vlan20-it                                     
- 2   192.168.60.3/24    192.168.60.0    vlan60-ubuntu-server                          
- 3   ;;; TO-FORTINET
-     10.10.101.2/30     10.10.101.0     ether1                                        
- 4   192.168.20.1/32    192.168.20.1    vrrp20                                        
- 5   192.168.10.1/32    192.168.10.1    vrrp10                                        
- 6   192.168.60.1/32    192.168.60.1    vrrp60                                        
-[admin@Mikrotik-Jakarta] > 
+![](images/2.jpeg)
 
-```
 2. Screenshot `/interface vrrp print`.
-```
-[admin@Mikrotik-Jakarta] > interface vrrp print
-Flags: X - disabled, I - invalid, R - running, M - master, B - backup 
- #     NAME         INTERFACE    MAC-ADDRESS       VRI PRI INTERVAL             V V3..
- 0  RM vrrp10       vlan10-fi... 00:00:5E:00:01:0A  10  90 1s                   3 ipv4
- 1  RM vrrp20       vlan20-it    00:00:5E:00:01:14  20 120 1s                   3 ipv4
- 2  RM vrrp60       vlan60-ub... 00:00:5E:00:01:3C  60  90 1s                   3 ipv4
-[admin@Mikrotik-Jakarta] > 
-
-```
+![](images/2.jpeg)
 3. Screenshot `/ip dhcp-relay print`.
-```
-[admin@Mikrotik-Jakarta] > ip dhcp-relay print
-Flags: X - disabled, I - invalid 
- #   NAME                   INTERFACE                  DHCP-SERVER     LOCAL-ADDRESS  
- 0   relay-vlan10           vlan10-finance             192.168.60.10   192.168.10.3   
- 1   relay-vlan20           vlan20-it                  192.168.60.10   192.168.20.3   
-[admin@Mikrotik-Jakarta] > 
-
-```
+![](images/2.jpeg)
 4. Screenshot `/ip route print`.
-```
-[admin@Mikrotik-Jakarta] > ip route print
-Flags: X - disabled, A - active, D - dynamic, 
-C - connect, S - static, r - rip, b - bgp, o - ospf, m - mme, 
-B - blackhole, U - unreachable, P - prohibit 
- #      DST-ADDRESS        PREF-SRC        GATEWAY            DISTANCE
- 0 A S  0.0.0.0/0                          10.10.101.1               1
- 1 ADC  10.10.101.0/30     10.10.101.2     ether1                    0
- 2 ADC  192.168.10.0/24    192.168.10.3    vlan10-finance            0
- 3 ADC  192.168.10.1/32    192.168.10.1    vrrp10                    0
- 4 ADC  192.168.20.0/24    192.168.20.3    vlan20-it                 0
- 5 ADC  192.168.20.1/32    192.168.20.1    vrrp20                    0
- 6 ADC  192.168.60.0/24    192.168.60.3    vlan60-ubuntu-s...        0
- 7 ADC  192.168.60.1/32    192.168.60.1    vrrp60                    0
-[admin@Mikrotik-Jakarta] > 
-
-```
+![](images/2.jpeg)
 5. Screenshot ping dari MikroTik ke FortiGate Jakarta.
-```
-[admin@Mikrotik-Jakarta] > ping 10.10.101.1
-  SEQ HOST                                     SIZE TTL TIME  STATUS                  
-    0 10.10.101.1                                56 255 1ms  
-    1 10.10.101.1                                56 255 0ms  
-    2 10.10.101.1                                56 255 0ms  
-    3 10.10.101.1                                56 255 0ms  
-    4 10.10.101.1                                56 255 0ms  
-    sent=5 received=5 packet-loss=0% min-rtt=0ms avg-rtt=0ms max-rtt=1ms 
-
-[admin@Mikrotik-Jakarta] > 
-
-```
-
+![](images/2.jpeg)
 ---
 
 # Tugas Modul 4 — Konfigurasi Ubuntu Server Jakarta
@@ -359,72 +293,14 @@ Ubuntu Server Jakarta.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot `ip a`.
-```
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether 50:8c:e5:00:ef:00 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.60.10/24 brd 192.168.60.255 scope global eth0
-       valid_lft forever preferred_lft forever
-    inet6 fe80::528c:e5ff:fe00:ef00/64 scope link 
-       valid_lft forever preferred_lft forever
-root@kvm:/# 
-
-```
+![](images/2.jpeg)
 2. Screenshot `ip route`.
-```
-root@kvm:/# ip route
-default via 192.168.60.1 dev eth0 proto static 
-192.168.60.0/24 dev eth0 proto kernel scope link src 192.168.60.10 
-root@kvm:/# 
-
-```
+![](images/2.jpeg)
 3. Screenshot isi file `/etc/dhcp/dhcpd.conf`.
-```
-root@kvm:/# sudo cat /etc/dhcp/dhcpd.conf
-authoritative;
 
-default-lease-time 600;
-max-lease-time 7200;
-
-# DNS
-option domain-name-servers 8.8.8.8, 1.1.1.1;
-
-# VLAN 10 - Finance
-subnet 192.168.10.0 netmask 255.255.255.0 {
-  range 192.168.10.100 192.168.10.200;
-  option routers 192.168.10.1;
-  option subnet-mask 255.255.255.0;
-  option broadcast-address 192.168.10.255;
-}
-
-# VLAN 20 - IT
-subnet 192.168.20.0 netmask 255.255.255.0 {
-  range 192.168.20.100 192.168.20.200;
-  option routers 192.168.20.1;
-  option subnet-mask 255.255.255.0;
-  option broadcast-address 192.168.20.255;
-}
-
-# VLAN 60 - Server Network
-subnet 192.168.60.0 netmask 255.255.255.0 {
-  option routers 192.168.60.1;
-  option subnet-mask 255.255.255.0;
-  option broadcast-address 192.168.60.255;
-}
-root@kvm:/# 
-
-```
+![](images/2.jpeg)
 4. Sreenshot `ping 8.8.8.8`
-```
-root@kvm:/# ping 8.8.8.8
-PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
-64 bytes from 8.8.8.8: icmp_seq=3 ttl=109 time=25.7 ms
-64 bytes from 8.8.8.8: icmp_seq=4 ttl=109 time=24.0 ms
-^C
---- 8.8.8.8 ping statistics ---
-10 packets transmitted, 2 received, 80% packet loss, time 9132ms
-rtt min/avg/max/mdev = 24.003/24.871/25.740/0.868 ms
-root@kvm:/# 
-```
+![](images/2.jpeg)
 ---
 
 # Tugas Modul 5 — Konfigurasi FortiGate Jakarta
@@ -437,41 +313,15 @@ FortiGate Jakarta.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot `/ip address print` **hasil di ether 1 bisa saja berbeda karena emang dinamic**.
-```
-[admin@mikrotik-isp] > ip address print
-Flags: X - disabled, I - invalid, D - dynamic 
- #   ADDRESS            NETWORK         INTERFACE                                     
- 0 D 10.0.137.149/24    10.0.137.0      ether1                                        
- 1   10.0.12.1/30       10.0.12.0       ether2                                        
- 2   10.0.13.1/30       10.0.13.0       ether3                                        
-[admin@mikrotik-isp] > 
-
-```
+![](images/2.jpeg)
 2. Screenshot `/ip route print`.
-```
-[admin@mikrotik-isp] > ip route print
-Flags: X - disabled, A - active, D - dynamic, 
-C - connect, S - static, r - rip, b - bgp, o - ospf, m - mme, 
-B - blackhole, U - unreachable, P - prohibit 
- #      DST-ADDRESS        PREF-SRC        GATEWAY            DISTANCE
- 0 ADS  0.0.0.0/0                          10.0.137.1                1
- 1 ADC  10.0.12.0/30       10.0.12.1       ether2                    0
- 2 ADC  10.0.13.0/30       10.0.13.1       ether3                    0
- 3 ADC  10.0.137.0/24      10.0.137.149    ether1                    0
-[admin@mikrotik-isp] > 
-
-```
+![](images/2.jpeg)
 3. Screenshot `/ip firewall nat print`.
-```
-[admin@mikrotik-isp] > ip firewall nat print
-Flags: X - disabled, I - invalid, D - dynamic 
- 0    chain=srcnat action=masquerade out-interface=ether1 
-[admin@mikrotik-isp] > 
-
-```
+![](images/2.jpeg)
 4. Screenshot ping ke 8.8.8.8.
+  ![](images/2.jpeg)
 5. Screenshot ping antar-WAN FortiGate.
-
+![](images/2.jpeg)
 ---
 
 # Tugas Modul 7 — Konfigurasi Switch dan MikroTik Surabaya
@@ -484,115 +334,22 @@ Cisco Switch Surabaya dan MikroTik Router Surabaya.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot `show vlan brief`.
-```
-VLAN Name                             Status    Ports
----- -------------------------------- --------- -------------------------------
-1    default                          active    Gi1/0, Gi1/1, Gi1/2, Gi1/3
-10   VLAN0010                         active    
-20   VLAN0020                         active    
-30   sales                            active    Gi0/1
-40   operations                       active    Gi0/2, Gi0/3
-1002 fddi-default                     act/unsup 
-1003 token-ring-default               act/unsup 
-1004 fddinet-default                  act/unsup 
-1005 trnet-default                    act/unsup 
-SWITCH-SURABAYA#
-
-```
+![](images/2.jpeg)
 2. Screenshot `show interfaces trunk`.
-```
-SWITCH-SURABAYA#show interfaces tr
-
-Port        Mode             Encapsulation  Status        Native vlan
-Gi0/0       on               802.1q         trunking      1
-
-Port        Vlans allowed on trunk
-Gi0/0       30,40
-
-Port        Vlans allowed and active in management domain
-Gi0/0       30,40
-
-Port        Vlans in spanning tree forwarding state and not pruned
-Gi0/0       30,40
-SWITCH-SURABAYA#
-
-```
+![](images/2.jpeg)
 3. Screenshot `/ip address print`.
-```
-[admin@mikrotik surabaya] > ip address print
-Flags: X - disabled, I - invalid, D - dynamic 
- #   ADDRESS            NETWORK         INTERFACE                              
- 0   10.10.200.2/30     10.10.200.0     ether1                                 
- 1   192.168.30.1/24    192.168.30.0    vlan30-sales                           
- 2   192.168.40.1/24    192.168.40.0    vlan40-operations                      
-[admin@mikrotik surabaya] > 
-
-```
+![](images/2.jpeg)
 4. Screenshot `/ip dhcp-server print`.
-```
-Flags: D - dynamic, X - disabled, I - invalid 
- #    NAME      INTERFACE    RELAY           ADDRESS-POOL    LEASE-TIME ADD-ARP
- 0    dhcp1     vlan30-sales                 dhcp_pool0      10m       
-[admin@mikrotik surabaya] > 
-
-```
+![](images/2.jpeg)
 5. Screenshot `/ip pool print`.
-```
-[admin@mikrotik surabaya] > ip pool print
- # NAME                                         RANGES                         
- 0 dhcp_pool0                                   192.168.30.2-192.168.30.254    
-[admin@mikrotik surabaya] > 
-
-```
+![](images/2.jpeg)
 6. Screenshot `/ip route print`.
-```
-[admin@mikrotik surabaya] > ip route print
-Flags: X - disabled, A - active, D - dynamic, 
-C - connect, S - static, r - rip, b - bgp, o - ospf, m - mme, 
-B - blackhole, U - unreachable, P - prohibit 
- #      DST-ADDRESS        PREF-SRC        GATEWAY            DISTANCE
- 0 A S  0.0.0.0/0                          10.10.200.1               1
- 1 ADC  10.10.200.0/30     10.10.200.2     ether1                    0
- 2 ADC  192.168.30.0/24    192.168.30.1    vlan30-sales              0
- 3 ADC  192.168.40.0/24    192.168.40.1    vlan40-operations         0
-[admin@mikrotik surabaya] > 
-
-```
+![](images/2.jpeg)
 7. Screenshot client VLAN 30 mendapat IP DHCP.
-```
-VPCS> ip dhcp
-DORA IP 192.168.30.254/24 GW 192.168.30.1
-
-VPCS> show ip
-
-NAME        : VPCS[1]
-IP/MASK     : 192.168.30.254/24
-GATEWAY     : 192.168.30.1
-DNS         : 8.8.8.8  
-DHCP SERVER : 192.168.30.1
-DHCP LEASE  : 597, 600/300/525
-MAC         : 00:50:79:66:68:e7
-LPORT       : 20000
-RHOST:PORT  : 127.0.0.1:30000
-MTU         : 1500
-
-VPCS> 
-
-```
+![](images/2.jpeg)
 
 8. Screenshot ping client Surabaya ke 8.8.8.8.
-```
-VPCS> ping 8.8.8.8
-
-84 bytes from 8.8.8.8 icmp_seq=1 ttl=109 time=23.941 ms
-84 bytes from 8.8.8.8 icmp_seq=2 ttl=109 time=24.313 ms
-84 bytes from 8.8.8.8 icmp_seq=3 ttl=109 time=24.125 ms
-84 bytes from 8.8.8.8 icmp_seq=4 ttl=109 time=24.357 ms
-84 bytes from 8.8.8.8 icmp_seq=5 ttl=109 time=26.724 ms
-
-VPCS> 
-
-```
+![](images/2.jpeg)
 
 ---
 
@@ -600,81 +357,24 @@ VPCS>
 
 ## Perangkat yang Dikonfigurasi
 
-FortiGate Surabaya.
-
-
-## Hasil yang Diharapkan
-
-1. FortiGate Surabaya dapat ping MikroTik ISP.
-2. FortiGate Surabaya dapat ping 8.8.8.8.
-3. Client Surabaya dapat akses internet.
-4. GRE Tunnel ke Jakarta aktif.
-5. OSPF neighbor dengan FortiGate Jakarta berstatus Full.
-6. Route Jakarta muncul di routing table FortiGate Surabaya.
+FortiGate Surabaya..
 
 ## Bukti yang Dikumpulkan
 
 1. Screenshot `get system interface physical`.
+ ![](images/2.jpeg)  
 2. Screenshot `get router info routing-table all`.
-```
-Routing table for VRF=0
-S*      0.0.0.0/0 [10/0] via 10.0.13.1, port1, [1/0]
-C       10.0.13.0/30 is directly connected, port1
-C       10.10.200.0/30 is directly connected, port2
-C       172.16.0.1/32 is directly connected, GRE-SBY-JKT
-C       172.16.0.2/32 is directly connected, GRE-SBY-JKT
-O E2    192.168.10.0/24 [110/10] via 172.16.0.1, GRE-SBY-JKT, 02:27:36, [1/0]
-O E2    192.168.20.0/24 [110/10] via 172.16.0.1, GRE-SBY-JKT, 02:27:36, [1/0]
-S       192.168.30.0/24 [10/0] via 10.10.200.2, port2, [1/0]
-S       192.168.40.0/24 [10/0] via 10.10.200.2, port2, [1/0]
-O E2    192.168.60.0/24 [110/10] via 172.16.0.1, GRE-SBY-JKT, 02:27:36, [1/0]
-
-
-Fortinet-Surabaya # 
-```
+![](images/2.jpeg)
 3. Screenshot firewall policy.
+   ![](images/2.jpeg)
 4. Screenshot ping ke 8.8.8.8.
+   ![](images/2.jpeg)
 5. Screenshot ping ke IP tunnel Jakarta.
-```
-Fortinet-Surabaya # execute ping 172.16.0.1
-PING 172.16.0.1 (172.16.0.1): 56 data bytes
-64 bytes from 172.16.0.1: icmp_seq=0 ttl=255 time=1.1 ms
-64 bytes from 172.16.0.1: icmp_seq=1 ttl=255 time=1.0 ms
-64 bytes from 172.16.0.1: icmp_seq=2 ttl=255 time=0.6 ms
-64 bytes from 172.16.0.1: icmp_seq=3 ttl=255 time=0.6 ms
-64 bytes from 172.16.0.1: icmp_seq=4 ttl=255 time=0.7 ms
-
---- 172.16.0.1 ping statistics ---
-5 packets transmitted, 5 packets received, 0% packet loss
-round-trip min/avg/max = 0.6/0.8/1.1 ms
-
-Fortinet-Surabaya # 
-
-```
+![](images/2.jpeg)
 6. Screenshot `get router info ospf neighbor`.
-```
-Fortinet-Surabaya # get router info ospf neighbor 
-OSPF process 0, VRF 0:
-Neighbor ID     Pri   State           Dead Time   Address         Interface
-1.1.1.1           1   Full/ -         00:00:38    172.16.0.1      GRE-SBY-JKT
-
-
-
-Fortinet-Surabaya # 
-
-
-```
+![](images/2.jpeg)
 7. Screenshot `get router info routing-table ospf`.
-```
-Fortinet-Surabaya # get router info routing-table ospf
-Routing table for VRF=0
-O E2    192.168.10.0/24 [110/10] via 172.16.0.1, GRE-SBY-JKT, 02:29:23, [1/0]
-O E2    192.168.20.0/24 [110/10] via 172.16.0.1, GRE-SBY-JKT, 02:29:23, [1/0]
-O E2    192.168.60.0/24 [110/10] via 172.16.0.1, GRE-SBY-JKT, 02:29:23, [1/0]
-
-
-Fortinet-Surabaya # 
-```
+![](images/2.jpeg)
 
 ---
 
@@ -688,25 +388,17 @@ FortiGate Jakarta dan FortiGate Surabaya.
 ## Bukti yang Dikumpulkan
 
 1. Screenshot ping WAN antar-FortiGate.
+   ![](images/2.jpeg)
 2. Screenshot ping tunnel antar-FortiGate.
-```
-Fortinet-Surabaya # execute ping 172.16.0.1
-PING 172.16.0.1 (172.16.0.1): 56 data bytes
-64 bytes from 172.16.0.1: icmp_seq=0 ttl=255 time=0.7 ms
-64 bytes from 172.16.0.1: icmp_seq=1 ttl=255 time=0.6 ms
-64 bytes from 172.16.0.1: icmp_seq=2 ttl=255 time=0.7 ms
-^C
---- 172.16.0.1 ping statistics ---
-3 packets transmitted, 3 packets received, 0% packet loss
-round-trip min/avg/max = 0.6/0.6/0.7 ms
-
-Fortinet-Surabaya # 
-
-```
+![](images/2.jpeg)
 3. Screenshot `get router info ospf neighbor`.
+   ![](images/2.jpeg)
 4. Screenshot `get router info routing-table ospf`.
+   ![](images/2.jpeg)
 5. Screenshot ping client Jakarta ke client Surabaya.
+   ![](images/2.jpeg)
 6. Screenshot ping client Surabaya ke client Jakarta.
+    ![](images/2.jpeg)
 
 ---
 
@@ -719,14 +411,23 @@ Seluruh perangkat pada topologi.
 ## Hal yang Harus Diuji
 
 1. Client VLAN 10 Jakarta mendapat IP DHCP dari Ubuntu Server.
+   ![](images/2.jpeg)
 2. Client VLAN 20 Jakarta mendapat IP DHCP dari Ubuntu Server.
+   ![](images/2.jpeg)
 3. Client VLAN 30 Surabaya mendapat IP DHCP dari MikroTik Surabaya.
+   ![](images/2.jpeg)
 4. Client VLAN 40 Surabaya menggunakan IP static.
+   ![](images/2.jpeg)
 5. Client Jakarta dapat ping 8.8.8.8.
+    ![](images/2.jpeg)
 6. Client Surabaya dapat ping 8.8.8.8.
+    ![](images/2.jpeg)
 7. Client Jakarta dapat ping client Surabaya.
+    ![](images/2.jpeg)
 8. Client Surabaya dapat ping client Jakarta.
+    ![](images/2.jpeg)
 9. Client Surabaya dapat mengakses web server Jakarta.
+    ![](images/2.jpeg)
 
 
 ---
@@ -734,40 +435,55 @@ Seluruh perangkat pada topologi.
 # 4. Hasil Pengujian
 
 1. Screenshot IP DHCP client Jakarta (Vlan 10).
-
+![](images/2.jpeg)
 2. Screenshot IP DHCP client Surabaya (Vlan 20).
-
+![](images/2.jpeg)
 
 3. Screenshot ping internet dari Jakarta.
-
+![](images/2.jpeg)
 
 
 4. Screenshot ping internet dari Surabaya.
-
-5. Screenshot ping antar-site (ini aku tes dari vlan 10 ke 
+![](images/2.jpeg)
+5. Screenshot ping antar-site
+  ![](images/2.jpeg)
+   
 6. Screenshot akses web server Jakarta dari Surabaya.
-
+![](images/2.jpeg)
 
 7. Screenshot routing table OSPF.
+   ![](images/2.jpeg)
 8. Analisis singkat jalur traffic Jakarta ke Surabaya.
 
 ---
 
 # 5. Analisis
 
-Pada praktikum ini FortiGate berfungsi sebagai firewall utama yang menghubungkan jaringan WAN, LAN, dan DMZ. Routing statis yang dikonfigurasi memungkinkan komunikasi antarsegmen jaringan, sedangkan firewall policy mengatur akses yang diperbolehkan dan ditolak.
+Pada modul 5, praktikan mengkonfigurasi FortiGate Jakarta sebagai edge firewall, NAT gateway, dan penghubung GRE tunnel ke Surabaya. Berdasarkan hasil konfigurasi yang telah dilakukan, FortiGate Jakarta memiliki tiga interface fisik yang aktif. Port1 dengan alamat 10.10.100.1/30 terhubung ke Cisco Router Jakarta, port2 dengan alamat 10.10.101.1/30 terhubung ke MikroTik Router Jakarta, dan port3 dengan alamat 10.0.12.2/30 terhubung ke MikroTik ISP sebagai link WAN.
 
-Implementasi DMZ memungkinkan server web dapat diakses dari jaringan luar tanpa membuka akses langsung ke jaringan LAN. Hal ini meningkatkan keamanan karena client WAN hanya dapat mengakses layanan yang dipublikasikan melalui Virtual IP (VIP) pada FortiGate.
+Penggunaan subnet /30 pada ketiga link menunjukkan efisiensi alamat IP untuk koneksi point-to-point. Dua interface menuju Cisco dan MikroTik Jakarta mendukung desain redundansi gateway karena kedua router tersebut menjalankan VRRP. Sementara port3 sebagai link WAN menempatkan FortiGate sebagai pintu keluar masuk traffic menuju internet.
 
-Hasil pengujian menunjukkan bahwa seluruh konfigurasi berjalan sesuai dengan desain topologi. Client LAN dapat mengakses server DMZ secara langsung, sedangkan Client WAN hanya dapat mengakses web server melalui alamat publik yang diterjemahkan menggunakan mekanisme NAT dan port forwarding.
+Dari sisi routing, FortiGate Jakarta memerlukan default route menuju MikroTik ISP agar traffic internet dapat keluar. Selain itu, static route ke jaringan internal Jakarta (VLAN 10, 20, 60) perlu ditambahkan meskipun FortiGate terhubung langsung ke subnet transit, karena static route memastikan FortiGate mengetahui cara menjangkau network di belakang router Cisco dan MikroTik. Kemudian, redistribute static ke OSPF akan menyebarkan rute jaringan Jakarta ke Surabaya melalui GRE tunnel.
+
+GRE tunnel dibangun antara FortiGate Jakarta dan FortiGate Surabaya dengan menggunakan alamat WAN masing-masing, yaitu 10.0.12.2 dan 10.0.13.2. Tunnel diberikan alamat 172.16.0.1/32 di sisi Jakarta dan 172.16.0.2/32 di sisi Surabaya. Penggunaan alamat /32 adalah praktik umum karena tunnel merupakan logical point-to-point link. Keberhasilan tunnel sangat bergantung pada konektivitas WAN antar FortiGate melalui ISP dan tidak adanya NAT yang mengubah source atau destination IP pada jalur tersebut.
+
+OSPF dijalankan di atas GRE tunnel dengan area backbone 0. Redistribute static diaktifkan pada kedua FortiGate sehingga jaringan di belakang masing-masing firewall dapat diiklankan secara dinamis. Hal ini memudahkan penambahan VLAN di masa depan tanpa konfigurasi manual di sisi lain.
+
+Firewall policy yang harus ada meliputi aturan untuk traffic internal Jakarta menuju internet dengan tindakan accept dan NAT diaktifkan. Sementara traffic internal Jakarta menuju Surabaya melalui GRE tunnel juga diizinkan namun tanpa NAT karena komunikasi antar-site menggunakan alamat private yang sudah dikenal. Kebijakan ini memisahkan secara jelas antara traffic internet dan traffic site-to-site.
 
 ---
 
 # 6. Kesimpulan
 
-1. MikroTik ISP berhasil berfungsi sebagai gateway menuju jaringan luar.
-2. FortiGate berhasil dikonfigurasi sebagai firewall yang menghubungkan WAN, LAN, dan DMZ.
-3. Cisco Router berhasil menghubungkan jaringan internal LAN dengan FortiGate.
-4. Server DMZ berhasil diakses dari Client LAN maupun Client WAN melalui konfigurasi VIP dan firewall policy.
-5. Firewall berhasil membatasi akses langsung dari jaringan WAN menuju jaringan LAN dan IP asli server DMZ.
-6. Implementasi NAT, routing, firewall policy, dan DMZ berjalan sesuai dengan tujuan praktikum.
+
+1. MikroTik ISP berhasil berfungsi sebagai gateway utama yang menghubungkan jaringan enterprise ke internet serta menghubungkan FortiGate Jakarta dan FortiGate Surabaya melalui link WAN.
+2. VRRP antara Cisco Router Jakarta dan MikroTik Router Jakarta berhasil dikonfigurasi, dengan Cisco sebagai master untuk VLAN 10 dan 60 serta MikroTik sebagai master untuk VLAN 20, sehingga menyediakan redundansi gateway di sisi kantor pusat.
+3. Ubuntu Server Jakarta berhasil berfungsi sebagai DHCP server terpusat untuk VLAN 10 dan VLAN 20, serta sebagai web server yang dapat diakses dari jaringan Surabaya.
+4. Cisco Router dan MikroTik Router Jakarta berhasil dikonfigurasi sebagai DHCP relay, sehingga permintaan IP dari client di VLAN 10 dan 20 dapat diteruskan ke Ubuntu Server di VLAN 60.
+5. FortiGate Jakarta dan FortiGate Surabaya berhasil dikonfigurasi sebagai firewall, NAT gateway, dan endpoint GRE tunnel, dengan kebijakan firewall yang memisahkan traffic internet dan traffic antar-site.
+6. GRE tunnel antara FortiGate Jakarta dan FortiGate Surabaya berhasil dibangun dan aktif, dibuktikan dengan keberhasilan ping antar alamat tunnel 172.16.0.1 dan 172.16.0.2.
+7. OSPF over GRE berjalan dengan sukses, ditandai dengan status neighbor full dan redistribusi rute statis sehingga rute jaringan Jakarta (192.168.10.0/24, 192.168.20.0/24, 192.168.60.0/24) muncul di tabel routing FortiGate Surabaya, dan sebaliknya.
+8. Client pada VLAN 10 dan VLAN 20 di Jakarta berhasil mendapatkan alamat IP dari DHCP server Ubuntu, client VLAN 30 di Surabaya mendapat IP dari DHCP server MikroTik, dan client VLAN 40 menggunakan IP statis sesuai ketentuan.
+9. Seluruh client baik di Jakarta maupun Surabaya berhasil mengakses internet melalui ping ke 8.8.8.8, menunjukkan konfigurasi NAT dan firewall policy pada FortiGate berfungsi dengan baik.
+10. Konektivitas antar-site teruji berhasil, dibuktikan dengan ping dari client VLAN 10 Jakarta ke client VLAN 40 Surabaya dan akses web server Jakarta dari client Surabaya melalui browser.
+11. Implementasi VRRP, DHCP relay, GRE tunnel, OSPF over GRE, serta firewall policy secara keseluruhan berjalan sesuai dengan tujuan praktikum, menghasilkan jaringan enterprise yang resilien, terpusat, dan terhubung secara dinamis.
