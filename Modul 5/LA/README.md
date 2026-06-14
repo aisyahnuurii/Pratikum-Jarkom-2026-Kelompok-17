@@ -227,11 +227,11 @@ Cisco Switch Jakarta.
 
 ## Bukti yang Dikumpulkan
 
-1. Screenshot topologi Jakarta.
+1. Screenshot topologi Jakarta.<br>
 ![Topologi](images/1.png)
-3. Screenshot show vlan brief.
+3. Screenshot show vlan brief.<br>
 ![](images/2.png)
-3. Screenshot show interfaces trunk.
+3. Screenshot show interfaces trunk.<br>
 ![](images/3.png)
 
 ---
@@ -244,14 +244,13 @@ Cisco Router Jakarta.
 
 ## Bukti yang Dikumpulkan
 
-1. Screenshot show ip interface brief.
-
+1. Screenshot show ip interface brief.<br>
 ![](images/4.png)
-2. Screenshot show vrrp brief.
+2. Screenshot show vrrp brief.<br>
 ![](images/5.png)
-3. Screenshot konfigurasi subinterface.
+3. Screenshot konfigurasi subinterface.<br>
 ![](images/4.png)
-4. Screenshot ping dari Cisco Router ke FortiGate Jakarta.
+4. Screenshot ping dari Cisco Router ke FortiGate Jakarta.<br>
 ![](images/6.png)
 
 ---
@@ -264,15 +263,15 @@ MikroTik Router Jakarta.
 
 ## Bukti yang Dikumpulkan
 
-1. Screenshot /ip address print.
+1. Screenshot /ip address print.<br>
 ![](images/7.png) 
-2. Screenshot /interface vrrp print.
+2. Screenshot /interface vrrp print.<br>
 ![](images/7.png)
-3. Screenshot /ip dhcp-relay print`.
+3. Screenshot /ip dhcp-relay print`.<br>
 ![](images/7.png)
-4. Screenshot /ip route print.
+4. Screenshot /ip route print.<br>
 ![](images/7.png)
-5. Screenshot ping dari MikroTik ke FortiGate Jakarta.
+5. Screenshot ping dari MikroTik ke FortiGate Jakarta.<br>
 ![](images/8.png)
 
 ---
@@ -285,13 +284,13 @@ Ubuntu Server Jakarta.
 
 ## Bukti yang Dikumpulkan
 
-1. Screenshot ip a.
+1. Screenshot ip a.<br>
 ![](images/9.png)  
-2. Screenshot ip route.
+2. Screenshot ip route.<br>
 ![](images/9.png)
-4. Screenshot isi file /etc/dhcp/dhcpd.conf.
+4. Screenshot isi file /etc/dhcp/dhcpd.conf.<br>
 ![](images/10.png)
-5. Sreenshot ping 8.8.8.8
+5. Sreenshot ping 8.8.8.8<br>
 ![](images/16.png)
 
 ---
@@ -303,19 +302,19 @@ Ubuntu Server Jakarta.
 FortiGate Jakarta.
 ## Bukti yang Dikumpulkan
 
-1. Screenshot get system interface physical.
+1. Screenshot get system interface physical.<br>
 ![](images/11.png)
-2. Screenshot get router info routing-table all.
+2. Screenshot get router info routing-table all.<br>
 ![](images/12.png)
-3. Screenshot firewall policy.
+3. Screenshot firewall policy.<br>
 ![](images/20.png)
-4. Screenshot ping ke 8.8.8.8.
+4. Screenshot ping ke 8.8.8.8.<br>
 ![](images/20.png)
-5. Screenshot ping ke IP tunnel Surabaya.
+5. Screenshot ping ke IP tunnel Surabaya.<br>
 ![](images/20.png)
-6. Screenshot get router info ospf neighbor.
+6. Screenshot get router info ospf neighbor.<br>
 ![](images/13.png)  
-7. Screenshot get router info routing-table ospf.
+7. Screenshot get router info routing-table ospf.<br>
 ![](images/13.png)
 
 ---
@@ -327,15 +326,15 @@ MikroTik ISP.
 
 ## Bukti yang Dikumpulkan
 
-1. Screenshot /ip address print.
+1. Screenshot /ip address print.<br>
 ![](images/14.png)
-2. Screenshot /ip route print.
+2. Screenshot /ip route print.<br>
 ![](images/14.png)
-3. Screenshot /ip firewall nat print.
+3. Screenshot /ip firewall nat print.<br>
 ![](images/14.png)
-4. Screenshot ping ke 8.8.8.8.
+4. Screenshot ping ke 8.8.8.8.<br>
 ![](images/14.png)
-5. Screenshot ping antar-WAN FortiGate.
+5. Screenshot ping antar-WAN FortiGate.<br>
 ![](images/15.png)
 
 ---
@@ -350,21 +349,21 @@ Cisco Switch Surabaya dan MikroTik Router Surabaya.
 
 ## Bukti yang Dikumpulkan
 
-1. Screenshot show vlan brief.
+1. Screenshot show vlan brief.<br>
 ![](images/17.png)
-2. Screenshot show interfaces trunk.
+2. Screenshot show interfaces trunk.<br>
 ![](images/17.png)
-3. Screenshot /ip address print.
+3. Screenshot /ip address print.<br>
 ![](images/17.png)
-4. Screenshot /ip dhcp-server print.
+4. Screenshot /ip dhcp-server print.<br>
 ![](images/17.png)
-5. Screenshot /ip pool print.
+5. Screenshot /ip pool print.<br>
 ![](images/17.png)
-6. Screenshot /ip route print.
+6. Screenshot /ip route print.<br>
 ![](images/17.png)
-7. Screenshot client VLAN 30 mendapat IP DHCP.
+7. Screenshot client VLAN 30 mendapat IP DHCP.<br>
 ![](images/18.png)
-8. Screenshot ping client Surabaya ke 8.8.8.8.
+8. Screenshot ping client Surabaya ke 8.8.8.8.<br>
 ![](images/18.png)
 
 ---
@@ -377,19 +376,19 @@ FortiGate Surabaya..
 
 ## Bukti yang Dikumpulkan
 
-1. Screenshot get system interface physical.
+1. Screenshot get system interface physical.<br>
 ![](images/19.png)
-2. Screenshot get router info routing-table all.
+2. Screenshot get router info routing-table all.<br>
 ![](images/19.png)
-3. Screenshot firewall policy.
+3. Screenshot firewall policy.<br>
 ![](images/20.png)
-4. Screenshot ping ke 8.8.8.8.
+4. Screenshot ping ke 8.8.8.8.<br>
 ![](images/20.png)
-5. Screenshot ping ke IP tunnel Jakarta.
+5. Screenshot ping ke IP tunnel Jakarta.<br>
 ![](images/20.png)
-6. Screenshot get router info ospf neighbor.
+6. Screenshot get router info ospf neighbor.<br>
 ![](images/21.png)
-7. Screenshot get router info routing-table ospf.
+7. Screenshot get router info routing-table ospf.<br>
 ![](images/22.png)
 
 ---
@@ -403,17 +402,17 @@ FortiGate Jakarta dan FortiGate Surabaya.
 
 ## Bukti yang Dikumpulkan
 
-1. Screenshot ping WAN antar-FortiGate.
+1. Screenshot ping WAN antar-FortiGate.<br>
 ![](images/23.png)
-2. Screenshot ping tunnel antar-FortiGate.
+2. Screenshot ping tunnel antar-FortiGate.<br>
 ![](images/24.png)
-3. Screenshot get router info ospf neighbor.
+3. Screenshot get router info ospf neighbor.<br>
 ![](images/27.png)
-4. Screenshot get router info routing-table ospf.
+4. Screenshot get router info routing-table ospf.<br>
 ![](images/27.png)
-5. Screenshot ping client Jakarta ke client Surabaya.
+5. Screenshot ping client Jakarta ke client Surabaya.<br>
 ![](images/25.png)
-6. Screenshot ping client Surabaya ke client Jakarta.
+6. Screenshot ping client Surabaya ke client Jakarta.<br>
 ![](images/26.png)
 
 ---
@@ -426,23 +425,23 @@ Seluruh perangkat pada topologi.
 
 ## Hal yang Harus Diuji
 
-1. Client VLAN 10 Jakarta mendapat IP DHCP dari Ubuntu Server.
+1. Client VLAN 10 Jakarta mendapat IP DHCP dari Ubuntu Server.<br>
 ![](images/28.png)
-2. Client VLAN 20 Jakarta mendapat IP DHCP dari Ubuntu Server.
+2. Client VLAN 20 Jakarta mendapat IP DHCP dari Ubuntu Server.<br>
 ![](images/29.png)
-3. Client VLAN 30 Surabaya mendapat IP DHCP dari MikroTik Surabaya.
+3. Client VLAN 30 Surabaya mendapat IP DHCP dari MikroTik Surabaya.<br>
 ![](images/30.png)
-4. Client VLAN 40 Surabaya menggunakan IP static.
+4. Client VLAN 40 Surabaya menggunakan IP static.<br>
 ![](images/31.png)
-5. Client Jakarta dapat ping 8.8.8.8.
+5. Client Jakarta dapat ping 8.8.8.8.<br>
 ![](images/32.png)
-6. Client Surabaya dapat ping 8.8.8.8.
+6. Client Surabaya dapat ping 8.8.8.8.<br>
 ![](images/33.png)
-9. Client Jakarta dapat ping client Surabaya.
+9. Client Jakarta dapat ping client Surabaya.<br>
 ![](images/2.jpeg)
-10. Client Surabaya dapat ping client Jakarta.
+10. Client Surabaya dapat ping client Jakarta.<br>
 ![](images/2.jpeg)
-11. Client Surabaya dapat mengakses web server Jakarta.
+11. Client Surabaya dapat mengakses web server Jakarta.<br>
 ![](images/2.jpeg)
 
 
@@ -450,19 +449,19 @@ Seluruh perangkat pada topologi.
 
 # 4. Hasil Pengujian
 
-1. Screenshot IP DHCP client Jakarta (Vlan 10).
+1. Screenshot IP DHCP client Jakarta (Vlan 10).<br>
 ![](images/30.png)
-2. Screenshot IP DHCP client Surabaya (Vlan 20).
+2. Screenshot IP DHCP client Surabaya (Vlan 20).<br>
 ![](images/31.png)
-3. Screenshot ping internet dari Jakarta.
+3. Screenshot ping internet dari Jakarta.<br>
 ![](images/32.png)
-4. Screenshot ping internet dari Surabaya.
+4. Screenshot ping internet dari Surabaya.<br>
 ![](images/33.png)
-5. Screenshot ping antar-site
+5. Screenshot ping antar-site<br>
 ![](images/35.png)
-6. Screenshot akses web server Jakarta dari Surabaya.
+6. Screenshot akses web server Jakarta dari Surabaya.<br>
 ![](images/36.png)
-7. Screenshot routing table OSPF.
+7. Screenshot routing table OSPF.<br>
 ![](images/37.png)
 
 8.  Analisis singkat jalur traffic Jakarta ke Surabaya.
