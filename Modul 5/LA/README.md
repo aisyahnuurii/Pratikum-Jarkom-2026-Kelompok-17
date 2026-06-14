@@ -434,11 +434,11 @@ Seluruh perangkat pada topologi.
 6. Client Surabaya dapat ping 8.8.8.8.
 ![](images/33.png)
 9. Client Jakarta dapat ping client Surabaya.
-    ![](images/2.jpeg)
+![](images/2.jpeg)
 10. Client Surabaya dapat ping client Jakarta.
-    ![](images/2.jpeg)
+![](images/2.jpeg)
 11. Client Surabaya dapat mengakses web server Jakarta.
-    ![](images/2.jpeg)
+![](images/2.jpeg)
 
 
 ---
@@ -460,11 +460,12 @@ Seluruh perangkat pada topologi.
 7. Screenshot routing table OSPF.
 ![](images/37.png)
 
-8.. Analisis singkat jalur traffic Jakarta ke Surabaya.
+8.  Analisis singkat jalur traffic Jakarta ke Surabaya.
 
 Ketika client di jaringan Jakarta (misalnya VLAN 10/20/60) mengirim paket menuju client di Surabaya (VLAN 30/40), paket pertama-tama diteruskan ke gateway VRRP aktif (Cisco Router atau MikroTik Router Jakarta, tergantung VLAN). Gateway tersebut meneruskan paket ke FortiGate Jakarta melalui link transit (port1/port2). Di FortiGate Jakarta, paket dicocokkan dengan routing table OSPF yang berisi network 192.168.30.0/24 dan 192.168.40.0/24 yang diiklankan oleh FortiGate Surabaya sebagai rute OSPF external type 2 (E2) melalui GRE Tunnel (172.16.0.2). Paket kemudian dienkapsulasi dan dikirim melalui GRE Tunnel ke FortiGate Surabaya.
 Setibanya di FortiGate Surabaya, paket di-dekapsulasi dan diteruskan ke MikroTik Router Surabaya melalui port2 (10.10.200.0/30), sesuai static route yang dikonfigurasi untuk network 192.168.30.0/24 dan 192.168.40.0/24. MikroTik Surabaya kemudian meneruskan paket ke VLAN tujuan (VLAN 30 atau VLAN 40) melalui interface gateway-nya hingga sampai ke client tujuan.
 Sebaliknya, paket balasan (reply) dari client Surabaya akan melewati jalur yang sama secara terbalik: MikroTik Surabaya → FortiGate Surabaya → GRE Tunnel → FortiGate Jakarta → Cisco/MikroTik Jakarta (gateway VRRP) → client Jakarta. Seluruh proses routing antar-site ini berjalan secara dinamis berkat OSPF yang dijalankan di atas GRE Tunnel, dengan redistribute static route yang memastikan network internal masing-masing site saling dikenali sebagai rute OSPF E2.
+
 ---
 
 # 5. Analisis
